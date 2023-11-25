@@ -1,3 +1,34 @@
 {
-  "extends": "next/core-web-vitals"
+	"settings": {
+		"env": {
+			"browser": true,
+			"es2021": true,
+			"jest": true
+		},
+		"react": {
+			"version": "detect"
+		},
+		"jest": {
+			"version": 29
+		}
+	},
+	"plugins": ["jest"],
+	"extends": [
+		"next/core-web-vitals",
+		"plugin:prettier/recommended",
+		"prettier"
+	],
+	"rules": {
+		"prettier/prettier": "error",
+		"sort-imports": [
+			"error",
+			{
+				"ignoreCase": false,
+				"ignoreDeclarationSort": true,
+				"ignoreMemberSort": false,
+				"memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+				"allowSeparatedGroups": false
+			}
+		]
+	}
 }
